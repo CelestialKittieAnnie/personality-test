@@ -1,0 +1,134 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #ffafbd, #ffc3a0);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  border-bottom: 5px solid #ff6f61;
+  position: relative;
+}
+
+header h1 {
+  font-size: 3em;
+  color: #fff;
+  text-shadow: 2px 2px #ff6f61;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #fff;
+}
+
+header::after {
+  content: '';
+  background: url('https://example.com/path-to-header-image.jpg') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+}
+
+main {
+  padding: 20px;
+}
+
+.question {
+  background: #ffecd2;
+  border: 2px solid #ff6f61;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 10px 0;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.question:hover {
+  transform: scale(1.05);
+}
+
+.question h2 {
+  text-align: center;
+  color: #ff6f61;
+}
+
+.question ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.question li {
+  padding: 10px;
+  margin: 5px 0;
+  background: #ffd3b6;
+  border: 2px solid #ff6f61;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.question li:hover {
+  background: #ffb397;
+}
+
+.question li::after {
+  content: url('https://example.com/path-to-icon.png');
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background: #ff6f61;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #ff4444;
+}
+
+#result {
+  background: #ffecd2;
+  border: 2px solid #ff6f61;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  border-top: 5px solid #ff6f61;
+  color: #fff;
+  position: relative;
+}
+
+footer::after {
+  content: '';
+  background: url('https://example.com/path-to-footer-image.jpg') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+}
