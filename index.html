@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personality Test</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Discover Your Personality</h1>
+    <p>Take the test and unveil your true self!</p>
+  </header>
+  <main>
+    <div id="questions">
+      <section class="question" id="q1">
+        <h2>Question 1</h2>
+        <img src="https://example.com/image1.jpg" alt="Image for Question 1">
+        <p>How do you handle stressful situations?</p>
+        <ul>
+          <li><input type="radio" name="q1" value="A"> A. Stay calm and think logically</li>
+          <li><input type="radio" name="q1" value="B"> B. Seek help from others</li>
+          <li><input type="radio" name="q1" value="C"> C. React impulsively</li>
+          <li><input type="radio" name="q1" value="D"> D. Avoid the situation</li>
+        </ul>
+        <button onclick="nextQuestion(1)">Submit</button>
+      </section>
+      <section class="question" id="q2" style="display:none;">
+        <h2>Question 2</h2>
+        <img src="https://example.com/image2.jpg" alt="Image for Question 2">
+        <p>How do you prefer to spend your free time?</p>
+        <ul>
+          <li><input type="radio" name="q2" value="A"> A. Reading a book</li>
+          <li><input type="radio" name="q2" value="B"> Socializing with friends</li>
+          <li><input type="radio" name="q2" value="C"> Engaging in physical activities</li>
+          <li><input type="radio" name="q2" value="D"> Watching TV or movies</li>
+        </ul>
+        <button onclick="nextQuestion(2)">Submit</button>
+      </section>
+      <section class="question" id="q3" style="display:none;">
+        <h2>Question 3</h2>
+        <img src="https://example.com/image3.jpg" alt="Image for Question 3">
+        <p>Which best describes your work style?</p>
+        <ul>
+          <li><input type="radio" name="q3" value="A"> A. Organized and methodical</li>
+          <li><input type="radio" name="q3" value="B"> Collaborative and team-oriented</li>
+          <li><input type="radio" name="q3" value="C"> Spontaneous and flexible</li>
+          <li><input type="radio" name="q3" value="D"> Independent and self-driven</li>
+        </ul>
+        <button onclick="nextQuestion(3)">Submit</button>
+      </section>
+      <section class="question" id="q4" style="display:none;">
+        <h2>Question 4</h2>
+        <img src="https://example.com/image4.jpg" alt="Image for Question 4">
+        <p>What motivates you the most?</p>
+        <ul>
+          <li><input type="radio" name="q4" value="A"> A. Achieving goals</li>
+          <li><input type="radio" name="q4" value="B"> Helping others</li>
+          <li><input type="radio" name="q4" value="C"> Seeking new experiences</li>
+          <li><input type="radio" name="q4" value="D"> Personal growth</li>
+        </ul>
+        <button onclick="nextQuestion(4)">Submit</button>
+      </section>
+      <section class="question" id="q5" style="display:none;">
+        <h2>Question 5</h2>
+        <img src="https://example.com/image5.jpg" alt="Image for Question 5">
+        <p>How do you usually make decisions?</p>
+        <ul>
+          <li><input type="radio" name="q5" value="A"> A. Based on logic and facts</li>
+          <li><input type="radio" name="q5" value="B"> Through discussion with others</li>
+          <li><input type="radio" name="q5" value="C"> By trusting your instincts</li>
+          <li><input type="radio" name="q5" value="D"> By avoiding making decisions</li>
+        </ul>
+        <button onclick="nextQuestion(5)">Submit</button>
+      </section>
+      <section class="question" id="q6" style="display:none;">
+        <h2>Question 6</h2>
+        <img src="https://example.com/image6.jpg" alt="Image for Question 6">
+        <p>How do you handle criticism?</p>
+        <ul>
+          <li><input type="radio" name="q6" value="A"> A. Take it constructively and improve</li>
+          <li><input type="radio" name="q6" value="B"> Discuss and seek clarification</li>
+          <li><input type="radio" name="q6" value="C"> Feel hurt and defensive</li>
+          <li><input type="radio" name="q6" value="D"> Ignore it</li>
+        </ul>
+        <button onclick="nextQuestion(6)">Submit</button>
+      </section>
+      <section class="question" id="q7" style="display:none;">
+        <h2>Question 7</h2>
+        <img src="https://example.com/image7.jpg" alt="Image for Question 7">
+        <p>What role do you prefer in a team?</p>
+        <ul>
+          <li><input type="radio" name="q7" value="A"> A. Leader</li>
+          <li><input type="radio" name="q7" value="B"> Collaborator</li>
+          <li><input type="radio" name="q7" value="C"> Innovator</li>
+          <li><input type="radio" name="q7" value="D"> Supporter</li>
+        </ul>
+        <button onclick="nextQuestion(7)">Submit</button>
+      </section>
+      <section class="question" id="q8" style="display:none;">
+        <h2>Question 8</h2>
+        <img src="https://example.com/image8.jpg" alt="Image for Question 8">
+        <p>How do you approach new challenges?</p>
+        <ul>
+          <li><input type="radio" name="q8" value="A"> With enthusiasm and determination</li>
+          <li><input type="radio" name="q8" value="B"> With caution and planning</li>
+          <li><input type="radio" name="q8" value="C"> With hesitation</li>
+          <li><input type="radio" name="q8" value="D"> With avoidance</li>
+        </ul>
+        <button onclick="nextQuestion(8)">Submit</button>
+      </section>
+      <section class="question" id="q9" style="display:none;">
+        <h2>Question 9</h2>
+        <img src="https://example.com/image9.jpg" alt="Image for Question 9">
+        <p>Which best describes your social interactions?</p>
+        <ul>
+          <li><input type="radio" name="q9" value="A"> Very social and outgoing</li>
+          <li><input type="radio" name="q9" value="B"> Enjoy socializing but need alone time</li>
+          <li><input type="radio" name="q9" value="C"> Prefer small groups</li>
+          <li><input type="radio" name="q9" value="D"> Prefer to be alone</li>
+        </ul>
+        <button onclick="nextQuestion(9)">Submit</button>
+      </section>
+      <section class="question" id="q10" style="display:none;">
+        <h2>Question 10</h2>
+        <img src="https://example.com/image10.jpg" alt="Image for Question 10">
+        <p>How do you handle conflicts?</p>
+        <ul>
+          <li><input type="radio" name="q10" value="A"> A. Resolve them calmly and diplomatically</li>
+          <li><input type="radio" name="q10" value="B"> Discuss and seek a compromise</li>
+          <li><input type="radio" name="q10" value="C"> Avoid and ignore them</li>
+          <li><input type="radio" name="q10" value="D"> React emotionally</li>
+        </ul>
+        <button onclick="nextQuestion(10)">Submit</button>
+      </section>
+      <section class="question" id="q11" style="display:none;">
+        <h2>Question 11</h2>
+        <img src="https://example.com/image11.jpg" alt="Image for Question 11">
+        <p>What best describes your learning style?</p>
+        <ul>
+          <li><input type="radio" name="q11" value="A"> A. Visual learner</li>
+          <li><input type="radio" name="q11" value="B"> Auditory learner</li>
+          <li><input type="radio" name="q11" value="C"> Kinesthetic learner</li>
+          <li><input type="radio" name="q11" value="D"> Reading/writing learner</li>
+        </ul>
+        <button onclick="nextQuestion(11)">Submit</button>
+      </section>
+      <section class="question" id="q12" style="display:none;">
+        <h2>Question 12</h2>
+        <img src="https://example.com/image12.jpg" alt="Image for Question 12">
+        <p>How do you handle failure?</p>
+        <ul>
+          <li><input type="radio" name="q12" value="A"> A. Learn from it and try again</li>
+          <li><input type="radio" name="q12" value="B"> Seek support and encouragement</li>
+          <li><input type="radio" name="q12" value="C"> Feel discouraged and give up</li>
+          <li><input type="radio" name="q12" value="D"> Ignore it and move on</li>
+        </ul>
+        <button onclick="nextQuestion(12)">Submit</button>
+      </section>
+      <section class="question" id="q13" style="display:none;">
+        <h2>Question 13</h2>
+        <img src="https://example.com/image13.jpg" alt="Image for Question 13">
+        <p>What best describes your communication style?</p>
+        <ul>
+          <li><input type="radio" name="q13" value="A"> A. Direct and clear</li>
+          <li><input type="radio" name="q13" value="B"> Friendly and open</li>
+          <li><input type="radio" name="q13" value="C"> Reserved and thoughtful</li>
+          <li><input type="radio" name="q13" value="D"> Indirect and subtle</li>
+        </ul>
+        <button onclick="nextQuestion(13)">Submit</button>
+      </section>
+      <section class="question" id="q14" style="display:none;">
+        <h2>Question 14</h2>
+        <img src="https://example.com/image14.jpg" alt="Image for Question 14">
+        <p>How do you prefer to solve problems?</p>
+        <ul>
+          <li><input type="radio" name="q14" value="A"> A. Analyzing and planning</li>
+          <li><input type="radio" name="q14" value="B"> Brainstorming with others</li>
+          <li><input type="radio" name="q14" value="C"> Taking quick action</li>
+          <li><input type="radio" name="q14" value="D"> Waiting and seeing</li>
+        </ul>
+        <button onclick="nextQuestion(14)">Submit</button>
+      </section>
+      <section class="question" id="q15" style="display:none;">
+        <h2>Question 15</h2>
+        <img src="https://example.com/image15.jpg" alt="Image for Question 15">
+        <p>What is your preferred way of expressing creativity?</p>
+        <ul>
+          <li><input type="radio" name="q15" value="A"> A. Art and design</li>
+          <li><input type="radio" name="q15" value="B"> Writing and storytelling</li>
+          <li><input type="radio" name="q15" value="C"> Music and performing arts</li>
+          <li><input type="radio" name="q15" value="D"> Building and crafting</li>
+        </ul>
+        <button onclick="nextQuestion(15)">Submit</button>
+      </section>
+      <section class="question" id="q16" style="display:none;">
+        <h2>Question 16</h2>
+        <img src="https://example.com/image16.jpg" alt="Image for Question 16">
+        <p>How do you handle multitasking?</p>
+        <ul>
+          <li><input type="radio" name="q16" value="A"> A. Manage it efficiently</li>
+          <li><input type="radio" name="q16" value="B"> Prefer to focus on one task</li>
+          <li><input type="radio" name="q16" value="C"> Feel overwhelmed</li>
+          <li><input type="radio" name="q16" value="D"> Avoid it when possible</li>
+        </ul>
+        <button onclick="nextQuestion(16)">Submit</button>
+      </section>
+      <section class="question" id="q17" style="display:none;">
+        <h2>Question 17</h2>
+        <img src="https://example.com/image17.jpg" alt="Image for Question 17">
+        <p>How do you recharge after a long day?</p>
+        <ul>
+          <li><input type="radio" name="q17" value="A"> A. Exercise or outdoor activities</li>
+          <li><input type="radio" name="q17" value="B"> Socializing with friends</li>
+          <li><input type="radio" name="q17" value="C"> Relaxing alone</li>
+          <li><input type="radio" name="q17" value="D"> Engaging in a hobby</li>
+        </ul>
+        <button onclick="nextQuestion(17)">Submit</button>
+      </section>
+      <section class="question" id="q18" style="display:none;">
+        <h2>Question 18</h2>
+        <img src="https://example.com/image18.jpg" alt="Image for Question 18">
+        <p>What is your approach to planning and organizing?</p>
+        <ul>
+          <li><input type="radio" name="q18" value="A"> A. Detailed and structured</li>
+          <li><input type="radio" name="q18" value="B"> Collaborative and flexible</li>
+          <li><input type="radio" name="q18" value="C"> Spur-of-the-moment</li>
+          <li><input type="radio" name="q18" value="D"> Minimal and spontaneous</li>
+        </ul>
+        <button onclick="nextQuestion(18)">Submit</button>
+      </section>
+      <section class="question" id="q19" style="display:none;">
+        <h2>Question 19</h2>
+        <img src="https://example.com/image19.jpg" alt="Image for Question 19">
+        <p>How do you approach learning new skills?</p>
+        <ul>
+          <li><input type="radio" name="q19" value="A"> A. Eager and curious</li>
+          <li><input type="radio" name="q19" value="B"> With some guidance</li>
+          <li><input type="radio" name="q19" value="C"> With hesitation</li>
+          <li><input type="radio" name="q19" value="D"> Only when necessary</li>
+        </ul>
+        <button onclick="nextQuestion(19)">Submit</button>
+      </section>
+      <section class="question" id="q20" style="display:none;">
+        <h2>Question 20</h2>
+        <img src="https://example.com/image20.jpg" alt="Image for Question 20">
+        <p>What best describes your time management style?</p>
+        <ul>
+          <li><input type="radio" name="q20" value="A"> A. Efficient and on schedule</li>
+          <li><input type="radio" name="q20" value="B"> Flexible but timely</li>
+          <li><input type="radio" name="q20" value="C"> Often procrastinate</li>
+          <li><input type="radio" name="q20" value="D"> Deal with tasks last minute</li>
+        </ul>
+        <button onclick="nextQuestion(20)">Submit</button>
+      </section>
+      <section class="question" id="q21" style="display:none;">
+        <h2>Question 21</h2>
+        <img src="https://example.com/image21.jpg" alt="Image for Question 21">
+        <p>How do you handle unexpected changes?</p>
+        <ul>
+          <li><input type="radio" name="q21" value="A"> A. Adapt quickly and easily</li>
+          <li><input type="radio" name="q21" value="B"> Seek advice and support</li>
+          <li><input type="radio" name="q21" value="C"> Feel stressed but manage</li>
+          <li><input type="radio" name="q21" value="D"> Struggle to adjust</li>
+        </ul>
+        <button onclick="nextQuestion(21)">Submit</button>
+      </section>
+      <section class="question" id="q22" style="display:none;">
+        <h2>Question 22</h2>
+        <img src="https://example.com/image22.jpg" alt="Image for Question 22">
+        <p>What best describes your approach to risk-taking?</p>
+        <ul>
+          <li><input type="radio" name="q22" value="A"> A. Calculated and strategic</li>
+          <li><input type="radio" name="q22" value="B"> Willing to take chances</li>
+          <li><input type="radio" name="q22" value="C"> Cautious and reserved</li>
+          <li><input type="radio" name="q22" value="D"> Avoid risks entirely</li>
+        </ul>
+        <button onclick="nextQuestion(22)">Submit</button>
+      </section>
+      <section class="question" id="q23" style="display:none;">
+        <h2>Question 23</h2>
+        <img src="https://example.com/image23.jpg" alt="Image for Question 23">
+        <p>How do you approach goal-setting?</p>
+        <ul>
+          <li><input type="radio" name="q23" value="A"> A. Set clear and achievable goals</li>
+          <li><input type="radio" name="q23" value="B"> Set goals and seek support</li>
+          <li><input type="radio" name="q23" value="C"> Set ambitious and challenging goals</li>
+          <li><input type="radio" name="q23" value="D"> Avoid setting goals</li>
+        </ul>
+        <button onclick="nextQuestion(23)">Submit</button>
+      </section>
+      <section class="question" id="q24" style="display:none;">
+        <h2>Question 24</h2>
+        <img src="https://example.com/image24.jpg" alt="Image for Question 24">
+        <p>What is your preferred way of celebrating achievements?</p>
+        <ul>
+          <li><input type="radio" name="q24" value="A"> A. Private reflection</li>
+          <li><input type="radio" name="q24" value="B"> Celebrating with close friends</li>
+          <li><input type="radio" name="q24" value="C"> Hosting a big party</li>
+          <li><input type="radio" name="q24" value="D"> Treating yourself to something special</li>
+        </ul>
+        <button onclick="nextQuestion(24)">Submit</button>
+      </section>
+      <section class="question" id="q25" style="display:none;">
+        <h2>Question 25</h2>
+        <img src="https://example.com/image25.jpg" alt="Image for Question 25">
+        <p>How do you handle long-term projects?</p>
+        <ul>
+          <li><input type="radio" name="q25" value="A"> A. Break them into manageable steps</li>
+          <li><input type="radio" name="q25" value="B"> Work collaboratively with others</li>
+          <li><input type="radio" name="q25" value="C"> Focus on the end goal</li>
+          <li><input type="radio" name="q25" value="D"> Avoid them when possible</li>
+        </ul>
+        <button onclick="nextQuestion(25)">Submit</button>
+      </section>
+      <section class="question" id="q26" style="display:none;">
+        <h2>Question 26</h2>
+        <img src="https://example.com/image26.jpg" alt="Image for Question 26">
+        <p>What is your approach to decision-making?</p>
+        <ul>
+          <li><input type="radio" name="q26" value="A"> A. Based on logic and data</li>
+          <li><input type="radio" name="q26" value="B"> Seeking input from others</li>
+          <li><input type="radio" name="q26" value="C"> Trusting your instincts</li>
+          <li><input type="radio" name="q26" value="D"> Avoid making decisions</li>
+        </ul>
+        <button onclick="nextQuestion(26)">Submit</button>
+      </section>
+      <section class="question" id="q27" style="display:none;">
+        <h2>Question 27</h2>
+        <img src="https://example.com/image27.jpg" alt="Image for Question 27">
+        <p>How do you approach problem-solving?</p>
+        <ul>
+          <li><input type="radio" name="q27" value="A"> A. Analyzing and planning</li>
+          <li><input type="radio" name="q27" value="B"> Brainstorming with others</li>
+          <li><input type="radio" name="q27" value="C"> Taking quick action</li>
+          <li><input type="radio" name="q27" value="D"> Avoiding it</li>
+        </ul>
+        <button onclick="nextQuestion(27)">Submit</button>
+      </section>
+      <section class="question" id="q28" style="display:none;">
+        <h2>Question 28</h2>
+        <img src="https://example.com/image28.jpg" alt="Image for Question 28">
+        <p>What best describes your stress management style?</p>
+        <ul>
+          <li><input type="radio" name="q28" value="A"> A. Exercise and physical activity</li>
+          <li><input type="radio" name="q28" value="B"> Relaxation and meditation</li>
+          <li><input type="radio" name="q28" value="C"> Talking to friends or family</li>
+          <li><input type="radio" name="q28" value="D"> Distracting yourself with hobbies</li>
+        </ul>
+        <button onclick="nextQuestion(28)">Submit</button>
+      </section>
+      <section class="question" id="q29" style="display:none;">
+        <h2>Question 29</h2>
+        <img src="https://example.com/image29.jpg" alt="Image for Question 29">
+        <p>How do you handle conflicts in relationships?</p>
+        <ul>
+          <li><input type="radio" name="q29" value="A"> A. Open and honest communication</li>
+          <li><input type="radio" name="q29" value="B"> Seeking compromise and understanding</li>
+          <li><input type="radio" name="q29" value="C"> Avoiding confrontation</li>
+          <li><input type="radio" name="q29" value="D"> Reacting emotionally</li>
+        </ul>
+        <button onclick="nextQuestion(29)">Submit</button>
+      </section>
+      <section class="question" id="q30" style="display:none;">
+        <h2>Question 30</h2>
+        <img src="https://example.com/image30.jpg" alt="Image for Question 30">
+        <p>How do you handle change?</p>
+        <ul>
+          <li><input type="radio" name="q30" value="A"> A. Embrace it and adapt quickly</li>
+          <li><input type="radio" name="q30" value="B"> Seek support from others</li>
+          <li><input type="radio" name="q30" value="C"> Resist and avoid it</li>
+          <li><input type="radio" name="q30" value="D"> Take time to adjust slowly</li>
+        </ul>
+        <button onclick="calculateResult()">Submit</button>
+      </section>
+    </div>
+    <div id="result" style="display:none;">
+  <h2>Your Result</h2>
+  <img id="resultImage" src="" alt="Result Image">
+  <p id="resultText"></p>
+  <p id="resultDescription"></p>
+</div>
+  </main>
+  <footer>
+    <p>© 2025 Personality Test. All rights reserved.</p>
+  </footer>
+</body>
+</html>
